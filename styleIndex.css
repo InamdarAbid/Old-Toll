@@ -1,0 +1,193 @@
+
+@media screen and (min-device-width: 965px){ 
+    .content{
+        background-image: url("contentBack.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+	    padding: 2% 0;
+        width: 100%;
+        height: 400px;
+        display: flex;
+        justify-content: flex-start;
+    }   
+
+    .card_section{
+		float: left;
+        width:40%; 
+        height: 360px;
+    }
+	
+    .card{
+        width:15%;
+        height:130px;
+        border-radius:10px;
+        text-align: center;
+    }
+
+    .front{
+        transition: transform 0.6s;
+        -moz-transition: -moz-transform 0.6s;
+        -webkit-transition: -webkit-transform 0.6s;
+        -o-transition: -moz-transform 0.6s;
+        visibility: visible;
+        backface-visibility: hidden;
+        -moz-backface-visibility: hidden;
+        -webkit-backface-visibility: hidden;        
+        padding: 10% 0%;
+        width:100%;
+        height:100%;
+        border-radius:10px;
+        text-align: center;
+        font-size: 1.5em;
+        background-color: #ffffff;
+    }
+
+    .back{
+        background-color: #ffffff;
+        backface-visibility: hidden;
+        -moz-backface-visibility: hidden;
+        -webkit-backface-visibility: hidden;
+        visibility: hidden;
+        padding: 10% 0%;
+        width:100%;
+        height:100%;
+        border-radius:10px;
+        text-align: center;
+        font-size: 1.2em;
+        transform: rotateY(180deg);
+        -moz-transform: rotateY(180deg);
+        -webkit-transform: rotateY(180deg);
+        -o-transform: rotateY(180deg);
+    }
+
+    #card1back, #card1,#box1{
+        position: absolute;
+        left: 0px;
+    }
+    #box1{
+        position: absolute;
+        left: 1%;
+    }
+    #card2back, #card2{
+        position: absolute;
+        left: 0%;
+    }
+    #box2{
+        position: absolute;
+        left: 18%;
+    }
+    #card3back, #card3{
+        position: absolute;
+        left: 0%;
+        top: 0%;
+    }
+    #box3{
+        position: absolute;
+        left: 1%;
+        top: 370px;
+    }
+    #card4back, #card4{
+        position: absolute;
+        left: 0%;
+        top: 0%;
+    }
+    #box4{
+        position: absolute;
+        left: 18%;
+        top: 370px;
+    }
+
+    .card:hover .back{
+        visibility: visible;
+        transition: transform 0.6s;
+        -moz-transition: -moz-transform 0.6s;
+        -webkit-transition: -webkit-transform 0.6s;
+        -o-transition: -moz-transform 0.6s;
+        transform: rotateY(360deg);
+        -moz-transform: rotateY(360deg);
+        -webkit-transform: rotateY(360deg);
+        -o-transform: rotateY(360deg);
+    }
+
+    .card:hover .front{
+        transform: rotateY(180deg);
+        -moz-transform: rotateY(180deg);
+        -webkit-transform: rotateY(180deg);
+        -o-transform: rotateY(180deg);
+    }
+    
+	.main{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+		background: rgba(255, 255, 255, 0.5);
+        color: #000000;
+        padding: 1% 1%;
+        text-align: center;
+        font-size: 50px;
+        width: 56%;
+        height: 380px;
+    }
+
+    #pay_now{
+        align-self: center;
+        font-size: 32px;
+        width: 40%;
+        height: 20%;
+        border: 2px solid #15781b;
+        border-radius: 50px;
+        background: linear-gradient(#77CC7D, #2D9434);
+        background: -webkit-linear-gradient(#77CC7D, #2D9434);
+        background: -moz-linear-gradient(#77CC7D, #2D9434);
+        background: -o-linear-gradient(#77CC7D, #2D9434);
+        /*background-color: #5d4037;*/
+        /*background-color: #10585C;*/
+        color: #ffffff;
+        cursor: pointer;
+        margin-top: 4%;
+        padding: 1%;
+        vertical-align: bottom;
+    }
+
+    #pay_now:active{
+        box-shadow: inset 2px 2px 2px 2px #281b17;
+        text-shadow: 2px 2px 2px #281b17;
+    }
+
+    #pay_now:hover{
+        /*background: linear-gradient(#281b17, #795548);
+        background: -webkit-linear-gradient(#281b17, #795548);
+        background: -moz-linear-gradient(#281b17, #795548);
+        background: -o-linear-gradient(#281b17, #795548);*/
+        background: linear-gradient(#2D9434, #77CC7D);
+        background: -webkit-linear-gradient(#2D9434, #77CC7D);
+        background: -moz-linear-gradient(#2D9434, #77CC7D);
+        background: -o-linear-gradient(#2D9434, #77CC7D);
+    }
+
+    #text{
+        font-size: 0.6em;
+    }
+	
+    .bottom_content{
+		clear: both;
+        width: 100%;
+        margin: 0% 10%;
+    }
+
+    .left_bottom{
+        width: 38%;
+        float: left;
+        padding: 2% 2%;
+    }
+
+    .right_bottom{
+        width: 38%;
+        float: left;
+        padding: 2% 2%;
+        max-height: 20em;
+        overflow: scroll;
+    }
+
+    
+}

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+       #map {
+        height: 400px;
+        width: 100%;
+       }
+    </style>
+  </head>
+  <body>
+    <h3>My Google Maps Demo</h3>
+    <div id="map"></div>
+    <script>
+      function initMap() {
+        var pntA = new google.maps.LatLng(19.0327801, 72.896345),
+            pntB  = new google.maps.LatLng(19.058129, 72.886368);
+        var uluru = {lat: 19.0327801, lng: 72.896345};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 15,
+          center: pntA
+        });
+        markerA = new google.maps.Marker({
+            position: pntA,
+            title: "point A",
+            label: "A",
+            map: map
+        }),
+        markerB = new google.maps.Marker({
+            position: pntB,
+            title: "point B",
+            label: "B",
+            map: map
+        });
+        directionsService = new google.maps.DirectionsService,
+        directionsDisplay = new google.maps.DirectionsRenderer({
+            map: map
+        });
+        displayRoute(directionsService, directionsDisplay, pntA, pntB);
+      }
+      function displayRoute(directionsService, directionsDisplay, pointA, pointB){
+        directionsService.route({
+          origin: pointA,
+          destination: pointB,
+          avoidTolls: false,
+          avoidHighways: false,
+          travelMode: google.maps.TravelMode.DRIVING
+        }, (res, status)=>{
+          if(status === google.maps.DirectionsStatus.OK){
+            directionsDisplay.setDirections(res);
+          }else {
+            window.alert('Directions request failed due to ' + status);
+        }
+        });
+      }
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA5jyqlYTh1pTBxlnN28dwYkuTdGOatzs0&callback=initMap">
+    </script>
+  </body>
+</html>

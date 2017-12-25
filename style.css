@@ -1,0 +1,89 @@
+/*http://paletton.com/#uid=a2Q3w0ki6rV87JVdfxNmhnEqwj3*/
+
+body{
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #ffffff;
+}
+
+.container{
+    width: 100%;
+    height: 100%;
+    
+}
+
+#header, #footer{
+    width: 100%;
+    font-family: helvetica;
+}
+#header{
+    padding: 5px;
+}
+
+@media screen and (min-device-width: 965px){
+    #logo{
+		height: 5em;
+        width: 10%;
+        float:left;
+        padding: 15px;
+        padding-bottom: 10px;
+    }
+    #sitename{
+        padding-top: 5px;
+        font-size: 2.5em;
+        font-weight: 450;
+    }
+    #motto{
+        font-size: 1.5em;
+        padding-bottom: 15px;
+    }
+
+    .nav_section{
+        padding: 0;
+		clear: both;
+        width: 100%;
+        /*background-color: #795548;*/
+        background-color: #1e1e1e;
+        /*background: linear-gradient(#4f7db9, #6296d0);
+        background: -webkit-linear-gradient(#4f7db9, #6296d0);
+        background: -moz-linear-gradient(#4f7db9, #6296d0);
+        background: -o-linear-gradient(#4f7db9, #6296d0);*/
+    }
+
+    .nav_section:hover #active{
+        /*background-color: #795548;*/
+        background-color: #1e1e1e;
+    }
+    .nav_section:hover #active:hover{
+        /*background-color: #6d4c41;*/
+        background-color: #4CAF50;
+    }
+
+    .nav{
+        transition: 0.3s;
+		display: inline-block;
+        font-size: 1.15em;
+        color: papayawhip;
+        text-decoration: none;
+        padding: 10px 20px;
+        margin: 0;
+    }
+    #logout{
+        color:white;
+        float:right;
+    }
+
+    .nav:hover{
+        /*background-color: #6d4c41;*/
+        background-color: #4CAF50;
+    }
+
+    #active{
+        background-color: #4CAF50;
+    }
+    
+}
+
